@@ -163,7 +163,7 @@ class DataFunctions {
       if (await isTableNotExists(CommonData.userTable, database)) return;
 
       await database.transaction((txn) async => await txn.rawInsert(
-          'INSERT INTO ${CommonData.userTable}(districtName, districtID, stateName, stateID) VALUES("$districtName", $districtID, "$stateName", $stateID)'));
+          'INSERT INTO ${CommonData.userTable}(diseaseName, diseaseID, symptomName, symptomID) VALUES("$diseaseName", $dieaseID, "$symptomName", $symptomID)'));
     } catch (_) {}
   }
 
